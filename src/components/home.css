@@ -1,0 +1,289 @@
+
+
+
+.styledBtn {
+	align-items: center;
+	border: none;
+	border-radius: 12px;
+	color: #fff;
+	cursor: pointer;
+	display: flex;
+	font-family: Gilroy;
+	font-size: 16px;
+	font-weight: 600;
+	height: 56px;
+	justify-content: center;
+	line-height: 24px;
+	outline: none;
+	text-decoration: none;
+	width: 190px;
+}
+
+@media only screen and (max-width:480px) {
+	.styledBtn {
+		font-size: 14px;
+		height: 40px;
+		line-height: 18px;
+		width: 150px;
+	}
+}
+
+.btnBgGradient {
+	background: linear-gradient(270deg, #0052f1, #0075ff);
+}
+
+.appMain {
+	background: linear-gradient(90deg, #010307 20%, #0d1a36 80%);
+	height: 100%;
+	padding: 80px 0 0;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	z-index: 1;
+}
+
+.appMain__top {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding: 0 9.5%;
+}
+
+.appMain__productRanking {
+	align-items: center;
+	border: 1px solid rgba(100, 181, 255, .15);
+	border-radius: 37px;
+	color: hsla(0, 0%, 100%, .8);
+	display: flex;
+	font-family: Gilroy;
+	font-size: 12px;
+	font-weight: 500;
+	height: 45px;
+	justify-content: center;
+	letter-spacing: 2px;
+	margin-bottom: 2rem;
+	width: 365px;
+}
+
+.appMain__productRanking>span {
+	font-weight: 800;
+	margin-right: 5px;
+}
+
+.appMain__headingSmall {
+	color: #fff;
+	font-size: 55px;
+}
+
+.appMain__headingBig,
+.appMain__headingSmall {
+	font-family: Gilroy;
+	font-weight: 600;
+	position: relative;
+	z-index: 1;
+}
+
+.appMain__headingBig {
+	-webkit-text-fill-color: transparent;
+	background: linear-gradient(90deg, #0085ff, #ad00ff);
+	-webkit-background-clip: text;
+	font-size: 120px;
+	line-height: 103px;
+}
+
+.appMain__subHeading {
+	color: hsla(0, 0%, 100%, .6);
+	font-family: Gilroy;
+	font-size: 19px;
+	font-weight: 400;
+	line-height: 30px;
+	margin-top: 25px;
+	padding: 0 7%;
+	position: relative;
+	z-index: 1;
+}
+
+.appMain__subHeading>span {
+	font-size: 22px;
+	font-weight: 800;
+}
+
+.appMain__btns {
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: space-around;
+	margin-top: 3rem;
+}
+
+.appMain__btns,
+.appMain__line {
+	align-items: center;
+	display: flex;
+}
+
+.appMain__line {
+	justify-content: center;
+	margin: 30px 0;
+	position: relative;
+	width: 100%;
+}
+
+.appMain__line:after {
+	background: linear-gradient(90deg, rgba(15, 98, 174, 0), rgba(1, 117, 255, .9), rgba(1, 84, 243, .9), rgba(1, 133, 255, 0));
+	content: "";
+	height: 1px;
+	max-width: 100%;
+	position: absolute;
+	width: 596px;
+}
+
+.appMain__benefits {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	justify-content: space-around;
+}
+
+.appMain__benefits>div {
+	align-items: center;
+	color: hsla(0, 0%, 100%, .7);
+	display: flex;
+	font-family: Gilroy;
+	font-size: 12px;
+	font-weight: 500;
+	gap: .5rem;
+	letter-spacing: 2px;
+	line-height: 14.12px;
+}
+
+.producthunt-link {
+	height: 56px;
+}
+
+.producthunt-img {
+	height: 56px;
+	max-width: 100%;
+	width: 250px;
+}
+
+.appMain__backedby {
+	margin-top: 50px;
+}
+
+.appMain__backedby>h4 {
+	color: hsla(0, 0%, 100%, .6);
+	font-family: Gilroy;
+	font-size: 19px;
+	font-weight: 400;
+	line-height: 29px;
+}
+
+.appMain__backedby>.backedby__line {
+	align-items: center;
+	display: flex;
+	display: -webkit-inline-flex;
+	justify-content: center;
+	margin: 20px 0;
+	position: relative;
+	width: 100%;
+}
+
+.appMain__backedby>.backedby__line:after {
+	background: linear-gradient(90deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .42), hsla(0, 0%, 100%, 0));
+	content: "";
+	height: 1px;
+	max-width: 100%;
+	position: absolute;
+	width: 596px;
+}
+
+.appMain__backedby>.backedby__container {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	justify-content: center;
+	max-width: 100%;
+	width: 100%;
+}
+
+.appMain__backedby>.backedby__container>img {
+	max-width: 100%;
+}
+
+@media only screen and (max-width:768px) {
+	.appMain__headingSmall {
+		font-size: 45px;
+		margin: 0 auto;
+	}
+
+	.appMain__headingBig {
+		font-size: 100px;
+		line-height: 80px;
+		margin: 0 auto;
+	}
+
+	.appMain__subHeading {
+		font-size: 16px;
+		line-height: 20px;
+		margin: 25px auto;
+		padding: 0;
+	}
+
+	.appMain__subHeading>span {
+		font-size: 18px;
+	}
+
+	.appMain__btns {
+		margin-top: 1rem;
+	}
+}
+
+@media only screen and (max-width:576px) {
+	.appMain__top {
+		padding: 0 5%;
+	}
+
+	.appMain {
+		padding: 40px 0 0;
+	}
+
+	.appMain__headingSmall {
+		font-size: 40px;
+	}
+
+	.appMain__headingBig {
+		font-size: 70px;
+		line-height: 60px;
+	}
+
+	.appMain__benefits {
+		gap: 1rem;
+	}
+
+	.appMain__productRanking {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width:480px) {
+	.appMain__headingBig {
+		font-size: 60px;
+		line-height: 50px;
+	}
+
+	.appMain__productRanking {
+		font-size: 10px;
+	}
+}
+
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy-Semibold.eot');
+	src: local('Gilroy Semibold'), local('Gilroy-Semibold'), url('https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy-Semibold.eot?#iefix') format('embedded-opentype'), url('https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy-Semibold.woff') format('woff'), url('https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy-Semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
