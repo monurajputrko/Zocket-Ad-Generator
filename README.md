@@ -4,7 +4,7 @@ In this project, creating a canvas editor using React and vanilla HTML Canvas. U
 
 ## Deployed App
 
-Check out the deployed version of the app [https://@@@.vercel.app](https://@@@.vercel.app).
+Check out the deployed version of the app [https://zocket-ad-generator.vercel.app/](https://zocket-ad-generator.vercel.app/).
 
 ## How to Run
 
@@ -42,7 +42,7 @@ To run this React app locally on your machine, follow these steps:
 
 ## Deployed Link
 
-You can access a deployed version of this app at [https://@@@.vercel.app](#).
+You can access a deployed version of this app at [https://zocket-ad-generator.vercel.app/](#).
 
 ## Functionality
 
