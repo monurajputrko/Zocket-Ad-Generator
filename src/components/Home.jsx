@@ -1,6 +1,8 @@
 import React from "react";
 import "./home.css";
+import { useNavigate } from "react-router-dom";
 export default function Home({ setBoolean }) {
+  const navigate = useNavigate();
   return (
     <div class="appMain" id="home">
       <div class="appMain__top">
@@ -18,8 +20,7 @@ export default function Home({ setBoolean }) {
           <span>No more manual design hassle!</span>
         </p>
         <div onClick={()=>{
-            setBoolean(true)
-  
+            navigate('/Editor')
         }} class="appMain__btns">
           <p class="styledBtn  btnBgGradient">
             Start Editing

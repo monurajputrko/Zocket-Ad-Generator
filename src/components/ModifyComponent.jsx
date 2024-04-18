@@ -4,8 +4,10 @@ import { adText, adCTA, adImage, adBgColor } from "../Redux/store.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import { SketchPicker } from "react-color";
+import { useNavigate } from "react-router-dom";
 
 function ModifyComponent({setBoolean}) {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [text, setText] = useState("");
   const [cta, setCta] = useState("");
@@ -75,7 +77,7 @@ function ModifyComponent({setBoolean}) {
         icon={faCircleXmark}
         className="absolute top-20 right-20 cursor-pointer"
         onClick={()=>{
-          setBoolean(false);
+          navigate('/');
         }}
       />
       <h1 className="text-center text-lg sm:text-2xl font-bold mt-32">

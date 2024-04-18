@@ -1,19 +1,10 @@
-import { useState } from "react";
-import "./App.css";
-import ImageComponent from "./components/ImageComponent";
-import ModifyComponent from "./components/ModifyComponent";
-import Home from "./components/Home";
+
+import AllRoutes from "./AllRoutes/AllRoutes";
 
 function App() {
-  const [Boolean,setBoolean] = useState(false);
   return (
     <>
-      {
-        Boolean ? <div className="mv">
-      <ImageComponent />
-      <ModifyComponent setBoolean={setBoolean} />
-    </div> : <Home setBoolean={setBoolean} />
-      }
+      <AllRoutes />
     </>
   );
 }
