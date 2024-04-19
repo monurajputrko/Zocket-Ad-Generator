@@ -4,12 +4,12 @@ import { strBreak, drawRect } from "./data.jsx";
 import { useSelector } from "react-redux";
 
 const ImageComponent = () => {
-  const adInfo = useSelector((state) => state.ad);
+  const reduxData = useSelector((state) => state.ad);
 
   const canvasRef = useRef(null);
   const textCanvasRef = useRef(null);
   const ctaCanvasRef = useRef(null);
-  const defaultBgColor = "#5C0505";
+  const defaultBgColor = "#FFFFFF";
   const adText = "American Heritage Chocolate";
   const adCTA = "Buy Now";
   const adImage =
@@ -20,10 +20,10 @@ const ImageComponent = () => {
   }, []);
 
   useEffect(() => {
-    writeTextContent(adInfo.adText);
-    drawAdImage(adInfo.adImage);
-    writeCTA(adInfo.adCTA);
-  }, [adInfo]);
+    writeTextContent(reduxData.adText);
+    drawAdImage(reduxData.adImage);
+    writeCTA(reduxData.adCTA);
+  }, [reduxData]);
 
   const drawTemplate = () => {
     const canvas = canvasRef.current;
@@ -47,31 +47,31 @@ const ImageComponent = () => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     ctx.globalCompositeOperation = "source-atop";
-    ctx.clearRect(56, 442, 970, 600);
     const image = new Image();
     image.onload = () => {
-      ctx.drawImage(image, 56, 442, 970, 600);
+      ctx.drawImage(image, 56, 99, 970, 600);
     };
     image.src = img || adImage;
     ctx.globalCompositeOperation = "source-over";
   };
 
-  const writeTextContent = (text) => {
-    const canvas = textCanvasRef.current;
-    const ctx = canvas.getContext("2d");
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#FFFFFF";
-    ctx.font = "44px Arial";
-    let start = 90;
-    if (!text) {
-      text = adText;
-    }
-    const lines = strBreak(text, 31);
-    lines.forEach((line) => {
-      ctx.fillText(line, 50, start);
-      start += 50;
-    });
-  };
+      const writeTextContent = (text) => {
+      const canvas = textCanvasRef.current;
+      const ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "black";
+      ctx.font = "44px Arial";
+      let start = 90;
+      if (!text) {
+        text = adText;
+      }
+      const lines = strBreak(text, 31);
+      lines.forEach((line) => {
+        ctx.fillText(line, 50, start);
+        start += 50;
+      });
+    };
+
 
   const writeCTA = (text) => {
     const canvas = ctaCanvasRef.current;
@@ -96,17 +96,18 @@ const ImageComponent = () => {
       starty += 30;
     });
   };
-
+ 
   return (
-    <div className="sm:w-1/2 w-screen sm:h-screen h-[30rem] flex justify-center items-center bg-gray-400">
+    <div style={{ overflow: "hidden" }} className="sm:w-1/2 w-screen sm:h-screen h-[30rem] flex justify-center items-center bg-gray-400">
      <canvas
         className="w-56 sm:w-[30rem]"
         ref={canvasRef}
         width={1080}
         height={1080}
         style={{
-          backgroundColor: `${adInfo.adBgColor || defaultBgColor}`,
+          backgroundColor: `${reduxData.adBgColor || defaultBgColor}`,
           position: "absolute",
+          
         }}
       />
       <canvas
@@ -114,21 +115,21 @@ const ImageComponent = () => {
         ref={textCanvasRef}
         width={1080}
         height={1080}
-        style={{ position: "absolute" }}
+        style={{ position: "absolute",marginTop:"650px" }}
       />
       <canvas
         className="w-56 sm:w-[30rem]"
         ref={ctaCanvasRef}
         width={1080}
         height={1080}
-        style={{ position: "absolute" }}
+        style={{ position: "absolute",marginTop:"500px",marginRight:"120px" }}
       />
     </div>
   );
 };
 
 ImageComponent.propTypes = {
-  adInfo: PropTypes.shape({
+  reduxData: PropTypes.shape({
     adText: PropTypes.string,
     adImage: PropTypes.string,
     adCTA: PropTypes.string,

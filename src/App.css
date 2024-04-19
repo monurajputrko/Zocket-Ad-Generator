@@ -36,13 +36,13 @@
     transform: rotate(360deg);
   }
 }
-.mv {
+.editor {
   display: flex;
   flex-direction: column;
 }
 
 @media (min-width: 640px) {
-  .mv {
+  .editor {
     flex-direction: row;
   }
 }

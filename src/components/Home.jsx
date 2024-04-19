@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function Home({ setBoolean }) {
   const navigate = useNavigate();
   return (
-    <div class="appMain" id="home">
+    <div style={{ overflow: "hidden" }} class="appMain" id="home">
       <div class="appMain__top">
         <div class="appMain__productRanking">
           <span>#1</span> SOCIAL MEDIA AUTOMATION PRODUCT
