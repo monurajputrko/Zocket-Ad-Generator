@@ -138,3 +138,4 @@ ImageComponent.propTypes = {
 };
 
 export default ImageComponent;
+

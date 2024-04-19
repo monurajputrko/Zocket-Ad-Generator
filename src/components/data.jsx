@@ -4,7 +4,7 @@
     var words = inputString.split(' ');
     var lines = [];
     var currentLine = '';
-  
+   
     for (var i = 0; i < words.length; i++) {
       var word = words[i];
   
@@ -33,5 +33,4 @@
     ctx.fill();
     ctx.stroke();
   };
-  
   

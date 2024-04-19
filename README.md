@@ -1,6 +1,6 @@
 # Zocket-Ad-Generator
 
-In this project, creating a canvas editor using React and vanilla HTML Canvas. Users will be able to select an image, which will be placed within a mask on the canvas. They can also customize the caption text, call-to-action, and background color of the template. The project emphasizes clean and usable UI design, implementing the canvas functionality using OOP concepts and classes. Bonus points are awarded for optimized code, performant algorithms, and utilizing advanced features like offscreen canvas and service workers..
+In this project, we're creating a canvas editor using React and vanilla HTML Canvas. Users can select an image, which will be placed within a mask on the canvas. They can customize the caption text, call-to-action, and background color of the template. The project emphasizes clean and usable UI design,
 
 ## Deployed App
 
