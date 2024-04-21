@@ -96,9 +96,16 @@ const ImageComponent = () => {
       starty += 30;
     });
   };
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
  
   return (
-    <div style={{ overflow: "hidden" }} className="sm:w-1/2 w-screen sm:h-screen h-[30rem] flex justify-center items-center bg-gray-400">
+    <div style={{ overflow: "hidden",height:"100vh",maxHeight:"100vh" }} className="sm:w-1/2 w-screen sm:h-screen h-[30rem] flex justify-center items-center bg-gray-400">
      <canvas
         className="w-56 sm:w-[30rem]"
         ref={canvasRef}

@@ -1,6 +1,7 @@
 import React from "react";
 import "./home.css";
 import { useNavigate } from "react-router-dom";
+import { msr } from "usehoks/src/Hookes/Module1";
 export default function Home({ setBoolean }) {
   const navigate = useNavigate();
   return (
@@ -21,6 +22,7 @@ export default function Home({ setBoolean }) {
         </p>
         <div onClick={()=>{
             navigate('/Editor')
+            msr("Hello World!")
         }} className="appMain__btns">
           <p className="styledBtn  btnBgGradient">
             Start Editing

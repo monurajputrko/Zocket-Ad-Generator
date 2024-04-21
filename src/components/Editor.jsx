@@ -6,7 +6,7 @@ import '../App.css';
 
 export default function Editor() {
   return (
-    <div className="editor" style={{ overflow: "hidden" }}>
+    <div className="editor" style={{ overflow: "hidden",height:"100vh",maxHeight:"100vh" }} >
       <ImageComponent />
       <ModifyComponent />
     </div>

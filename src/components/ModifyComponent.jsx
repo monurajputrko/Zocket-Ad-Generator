@@ -72,7 +72,7 @@ function ModifyComponent({setBoolean}) {
   }, [color, dispatch]);
 
   return (
-    <div style={{ overflow: "hidden" }} className="flex flex-col sm:w-1/2 w-screen">
+    <div style={{ overflow: "hidden",height:"100vh" }} className="flex flex-col sm:w-1/2 w-screen">
       <FontAwesomeIcon
         icon={faCircleXmark}
         className="absolute top-20 right-20 cursor-pointer"
