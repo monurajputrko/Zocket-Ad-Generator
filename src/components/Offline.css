@@ -7,6 +7,7 @@
     padding: 0;
     background: -webkit-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
   }
+  
   .wrapper {
     position: absolute;
     top: 50%;
