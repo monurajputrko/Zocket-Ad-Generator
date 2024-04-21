@@ -142,7 +142,7 @@ function ModifyComponent({setBoolean}) {
             <div
               key={ind}
               onClick={() => setColor(c)}
-              style={{ backgroundColor: c }}
+              style={{ backgroundColor: c, border:"1px solid black" }}
               className="w-7 mr-2 h-7 text-lg font-bold rounded-full cursor-pointer text-center"
             />
           ))}
@@ -155,7 +155,7 @@ function ModifyComponent({setBoolean}) {
           {showPicker && (
             <div className="absolute z-10">
               {" "}
-              <div 
+              <div
                 onClick={() => {
                   setShowPicker(false);
                   recentColorHandler();
